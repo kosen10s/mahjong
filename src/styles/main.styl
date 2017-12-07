@@ -1,0 +1,99 @@
+@import "../../node_modules/normalize.css/normalize.css"
+$blue = #155799
+$green = #159957
+$lime = #1D976C
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: $lime
+  font-weight: 100
+}
+
+a {
+  text-decoration: none
+  color: $blue
+}
+
+section {
+  padding: 2rem
+}
+
+gradient() {
+  background: linear-gradient(120deg, $blue, $green)
+}
+
+.main-header {
+  height: 400px
+  background: $green
+  gradient()
+  display: flex
+  justify-content: center
+  align-items: center
+  h1 {
+    font-size: 3rem
+    color: white
+    font-weight: 100
+    text-shadow: 2px 4px 10px lighten($blue, 4%)
+  }
+}
+
+.container {
+  max-width: 800px
+  margin: 0 auto
+}
+
+.table {
+  width: 100%
+  th {
+    font-weight: 200
+    color: $green
+  }
+  td {
+    height: 3em
+  }
+  th,td {
+    &.left {
+      text-align: left
+    }
+    &.center {
+      text-align: center
+    }
+    &.right {
+      text-align: right
+    }
+  }
+}
+
+.card {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3)
+  padding: 1em
+}
+
+.footer {
+  position: relative
+  height: 100px
+  display: flex
+  justify-content: center
+  align-items: center
+  &::before {
+    position: absolute
+    width: 80%
+    height: 2px
+    content: ' '
+    top: 0
+    left: 10%
+    gradient()
+  }
+}
+
+.record-table {
+  font-size: 20px
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
