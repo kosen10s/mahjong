@@ -13,7 +13,7 @@
 `sh ./tools/deploy.sh`
 
 ## 新しい成績の追加方法
-`assets/records` ディレクトリに新しい成績データをjsonで追加してください。
+`src/assets/records` ディレクトリに新しい成績データをjsonで追加してください。
 ファイル名は任意です。
 
 jsonデータは、以下のフォーマットで記述してください
