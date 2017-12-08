@@ -57,7 +57,7 @@ gradient() {
   td {
     height: 3em
   }
-  th,td {
+  th, td {
     &.left {
       text-align: left
     }
@@ -73,6 +73,7 @@ gradient() {
 .card {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3)
   padding: 1em
+  overflow-x: scroll
 }
 
 .footer {
@@ -83,11 +84,11 @@ gradient() {
   align-items: center
   &::before {
     position: absolute
-    width: 80%
+    width: 100%
     height: 2px
     content: ' '
     top: 0
-    left: 10%
+    left: 0
     gradient()
   }
 }
@@ -95,5 +96,19 @@ gradient() {
 .record-table {
   font-size: 20px
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  min-width: 450px
+}
+
+@media screen and (max-width: 414px) {
+ .main-header h1 {
+   font-size: 2.4rem
+ }
+  .container {
+    width: 90%
+  }
+  section {
+    padding-left: 0
+    padding-right: 0
+  }
 }
 
