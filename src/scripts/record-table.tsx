@@ -25,7 +25,7 @@ export class RecordTable {
                     {this.data[0].scoreTrans.map((_, i) => {
                         return (<th className='right'>第{i + 1}回</th>)
                     })}
-                    <th className='right'>総合得点</th>
+                    <th className='right'>総合</th>
                 </tr>
                 </thead>
                 <tbody>
