@@ -20,7 +20,6 @@ function loadRecordsFromJson(): Record[] {
 }
 
 function fillScoreTrans(record: Record, personName: string): Array<number | null> {
-    console.log(personName, record.nth);
     const res: Array<number | null> = [];
     for (let i = 1; i < record.nth; i++) {
         if (record.nth === 1) break;
