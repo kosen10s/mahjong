@@ -10,7 +10,7 @@ export interface Record {
     }
 }
 
-function loadRecordsFromJson(): Record[] {
+const loadRecordsFromJson = (): Record[] => {
     const context = require.context('../assets/records', true, /\.json$/);
     const data: any[] = [];
     context.keys().forEach((key: string) => {
@@ -19,7 +19,7 @@ function loadRecordsFromJson(): Record[] {
     return data as Record[];
 }
 
-function fillScoreTrans(record: Record, personName: string): Array<number | null> {
+const fillScoreTrans = (record: Record, personName: string): Array<number | null> => {
     const res: Array<number | null> = [];
     for (let i = 1; i < record.nth; i++) {
         if (record.nth === 1) break;
@@ -56,8 +56,8 @@ for (const record of records) {
 
 ranking = _.sortBy(ranking, r => r.totalScore).reverse();
 
- for (let i = 0; i < ranking.length; i++) {
-     ranking[i].rank = i + 1;
- }
+for (let i = 0; i < ranking.length; i++) {
+    ranking[i].rank = i + 1;
+}
 const recordTable = new RecordTable();
 recordTable.render(ranking);
